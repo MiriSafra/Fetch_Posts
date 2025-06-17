@@ -51,8 +51,8 @@ def main():
         elif ext == ".txt":
             format = "txt"
         if format != "txt" and format != "json":
-                print(f"Unsupported file extension: {ext}")
-                exit(1)
+            print(f"Unsupported file extension: {ext}")
+            exit(1)
         with open(args.output, "w", encoding="utf-8") as f:
             if format == "json":
                 json.dump(filtered, f, ensure_ascii=False, indent=2)
